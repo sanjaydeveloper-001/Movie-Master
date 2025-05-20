@@ -12,7 +12,7 @@ function WatchCard({movie ,toWatch ,  watching , watched , activeBar , HandleAdd
 
     
   return (
-    <div className='group cursor-pointer relative w-[230px] h-[260px] border-1 border-gray-300 flex flex-col rounded-[10px] hover:scale-105 transition-all duration-150 shadow-[0_0_10px_rgba(0,0,0,.3)] hover:shadow-[-20px_20px_10px_rgba(0,0,0,.3)]'>
+    <div className='group cursor-pointer relative w-[140px] h-[170px] sm:w-[170px] sm:h-[200px] md:w-[200px] md:h-[230px] lg:w-[230px] lg:h-[260px] border-1 border-gray-300 flex flex-col rounded-[10px] hover:scale-105 transition-all duration-150 shadow-[0_0_10px_rgba(0,0,0,.3)] hover:shadow-[-20px_20px_10px_rgba(0,0,0,.3)]'>
         <img className='h-[120px] w-full rounded-t-[10px]' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}  />
         <div className='m-3 h-full flex flex-col justify-between pb-3'>
             <h1 className='flex items-center gap-x-1'><BiMoviePlay />{movie.title}</h1>

@@ -13,11 +13,15 @@ function MovNav({language , setLanguage , setSearchMovieName , SearchMovies , Se
     setSearchMovieName('')
     SetMovies();
   }
+
+  const screenwidth = window.innerWidth;
   
 
 
   return (
-    <div className='flex w-full h-18 text-white border-white border-b-2 items-center justify-between px-10'>
+    <>
+    { screenwidth <500 ? '' :
+      <div className='flex w-full h-18 text-white border-white border-b-2 items-center justify-between px-10'>
         <div className='flex gap-5 items-center'>
             <label className='text-xl' htmlFor="Filter">Filter : </label>
             <select onChange={changeLanguageName} value={language} name="Filter" id="Filter" className='outline-none w-[200px] py-2 border-b-2 hover:border-yellow-400 cursor-pointer hover:text-yellow-400 px-2 text-white gap-10'>
@@ -36,7 +40,8 @@ function MovNav({language , setLanguage , setSearchMovieName , SearchMovies , Se
             <IoClose onClick={HandleSetMovies} className='cursor-pointer text-xl hover:text-amber-400/50 text-white/50 absolute right-10' /> : ''
           }
         </div>
-    </div>
+    </div>}
+    </>
   )
 }
 

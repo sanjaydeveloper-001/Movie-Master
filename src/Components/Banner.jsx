@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import genreids from "../utilities/gonerids";
+import { GoArrowUpRight } from "react-icons/go";
 
-function Banner({ movieList }) {
+function Banner({ movieList , setCurrentMovie }) {
   let i = 0;
   const [rndNum, setRndNum] = useState(5);
 
@@ -50,9 +51,13 @@ function Banner({ movieList }) {
           {movieList[rndNum]?.genre_ids.map((ids)=>{
             return ( <div className="text-xl cursor-pointer text-white mr-5 font-bold hover:underline hover:text-yellow-400" >{genreids[ids]}</div>)
           })}
+          <div onClick={()=>{setCurrentMovie(movieList[rndNum])}} className="cursor-pointer flex justify-center items-center py-1 px-3 bg-white text-black rounded-[5px] gap-1 hover:bg-white/50">
+          <GoArrowUpRight/> View
+        </div>
         </div>
 
-      </div>
+      </div> 
+      
     </div>
   );
 }
