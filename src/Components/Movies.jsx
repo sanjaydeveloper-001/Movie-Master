@@ -49,6 +49,7 @@ function Movies({
   };
 
   const SearchMovies = () => {
+    if(SearchMovieName.length >= 3) {
     axios
       .get(
         `https://api.themoviedb.org/3/search/movie?api_key=e93024c976aae365e9e0bf4e379f4181&query=${SearchMovieName}`
@@ -56,6 +57,11 @@ function Movies({
       .then(function (res) {
         setMovies(res.data.results);
       });
+    }
+    else{
+      alert("Enter Atleast 3 letter to search")
+      SetMovies();
+    }
   };
 
   useEffect(() => {
