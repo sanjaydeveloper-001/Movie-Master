@@ -9,7 +9,7 @@ function Banner({ movieList , setCurrentMovie }) {
   useEffect(() => {
     const interval = setInterval(() => {
       changeBanner();
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
