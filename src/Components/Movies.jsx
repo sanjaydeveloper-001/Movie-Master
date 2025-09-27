@@ -23,6 +23,12 @@ function Movies({
     return data ? JSON.parse(data) : 1;
   });
 
+  const today = new Date();
+
+  const day = String(today.getDate()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const year = today.getFullYear();
+
   const HandlePrevious = () => {
     if (pageNo > 1) {
       let data = pageNo - 1;
@@ -40,7 +46,7 @@ function Movies({
   const SetMovies = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=e93024c976aae365e9e0bf4e379f4181&with_original_language=${language}&release_date.lte=2025-01-01&release_date.gte=2023-05-01&region=IN&page=${pageNo}`
+        `https://api.themoviedb.org/3/discover/movie?api_key=e93024c976aae365e9e0bf4e379f4181&with_original_language=${language}&release_date.lte=${year+"-"+month+"-"+day}&release_date.gte=${year}-01-01&region=IN&page=${pageNo}`
       )
       .then(function (res) {
         setMovies(res.data.results);
