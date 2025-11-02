@@ -30,57 +30,10 @@ This version focuses on frontend development, smooth UI design, and API integrat
 
 ---
 
-## 📦 Installation and Setup
-
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/sanjaydeveloper-001/The-Movie-Hub-V1/
-cd The-Movie-Hub-V1
-```
-
-### 2️⃣ Install dependencies
-```bash
-npm install
-```
-
-### 3️⃣ Create `.env` file
-Create a `.env` file in the root directory and add your TMDB API key:
-
-```
-VITE_TMDB_API=your_tmdb_api_key
-```
-
-### 4️⃣ Run the app
-```bash
-npm run dev
-```
-
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
-
----
-
-## 📁 Folder Structure
-
-```
-movie-hub-v1/
-│
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-└── README.md
-```
-
----
-
 ## 🌐 Live Demo
 
-🔗 **Live Link:** [Add your deployed site link here]  
-💻 **GitHub Repository:** [https://github.com/sanjaydeveloper-001/The-Movie-Hub-V1/](https://github.com/sanjaydeveloper-001/The-Movie-Hub-V1/)
+🔗 **Live Link:** [https://moviemaster-ten.vercel.app/](https://moviemaster-ten.vercel.app/)  
+💻 **GitHub Repository:** [https://github.com/sanjaydeveloper-001/Movie-Master/](https://github.com/sanjaydeveloper-001/Movie-Master/)
 
 ---
 
